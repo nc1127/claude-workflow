@@ -1,0 +1,40 @@
+# Project guide for Claude Code
+
+Keep this file short. Procedures belong in skills. Constraints belong in rules.
+
+## Product / domain
+- Domain: Recruitment (change me)
+- Sensitive data: employee/candidate PII — synthetic fixtures only
+
+## Repo map
+- `apps/web/` — React / Next frontend
+- `apps/api/` — Node API
+- `packages/types/` — shared types
+- `packages/ds/` — design system (prefer existing components)
+
+## Commands
+- Install: `pnpm install`
+- Lint: `pnpm lint`
+- Typecheck: `pnpm typecheck`
+- Unit tests: `pnpm test`
+- API tests: `pnpm test:api`
+- Web tests: `pnpm test:web`
+- E2E (when needed): `pnpm test:e2e`
+
+## Engineering norms
+- Spec-driven: BDD scenarios + OpenAPI/GraphQL are source of truth
+- AI and human code: same quality bar
+- New user-facing behaviour: feature flag default OFF, dark deploy
+- Prefer design-system components; new DS APIs need TTL approval
+- No drive-by refactors outside the ticket
+
+## Orchestration
+- Start features with an orchestration brief
+- Run `/context-pack` before parallel FE/BE agents
+- Trust-boundary changes (authz, PII, migrations) need human TTL review
+
+## Where to look next
+- Skills: `.claude/skills/`
+- Rules: `.claude/rules/`
+- Agent roles: `.claude/agents/`
+- Brief template: `docs/ai-orchestration/templates/ORCHESTRATION-BRIEF.md` (if copied)
