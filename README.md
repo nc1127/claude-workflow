@@ -1,6 +1,6 @@
 # AI Orchestration Kit (Claude Code)
 
-Paste-ready setup for a Technical Team Lead running **spec-driven + agentic** delivery.
+Paste-ready setup for a technical lead running **spec-driven + agentic** delivery.
 
 Use this to:
 - Own the **AI orchestration plan** per piece of work
@@ -13,7 +13,7 @@ Use this to:
 ## Folder map
 
 ```text
-elmo-ai-orchestration-kit/
+claude-workflow/
 ├── README.md                          ← you are here
 ├── SETUP.md                           ← install into a repo
 ├── WORKFLOW.md                        ← daily / sprint operating model
@@ -22,7 +22,7 @@ elmo-ai-orchestration-kit/
 │   ├── ORCHESTRATION-BRIEF.md
 │   └── CONTEXT-PACK.md
 ├── examples/
-│   └── REC-441-reject-candidate.md
+│   └── FEAT-128-archive-project.md
 ├── prompt-library/
 │   └── README.md                      ← human-readable library index
 └── .claude/
@@ -44,9 +44,9 @@ elmo-ai-orchestration-kit/
 
 ---
 
-## Ownership (TTL)
+## Ownership (tech lead)
 
-| JD responsibility | Artefact in this kit |
+| Responsibility | Artefact in this kit |
 |---|---|
 | AI orchestration plan | `WORKFLOW.md` + brief parallel graph |
 | Agent orchestration brief | `templates/ORCHESTRATION-BRIEF.md` |
@@ -69,6 +69,6 @@ elmo-ai-orchestration-kit/
 - Documentation
 - `review-agent` + `/review-all` merges them
 
-## Suggested interview one-liner
+## One-liner summary
 
-> I run a Claude Code harness: short CLAUDE.md, path-scoped rules, a curated skill/prompt library, and specialised agents. Each ticket gets an orchestration brief—context pack first, then parallel implementers against locked BDD/OpenAPI, then a parallel review pack (quality, security, perf, tests, docs), same gates as human code.
+> Run a Claude Code harness: short CLAUDE.md, path-scoped rules, a curated skill/prompt library, and specialised agents. Each ticket gets an orchestration brief—context pack first, then parallel implementers against locked BDD/OpenAPI, then a parallel review pack (quality, security, perf, tests, docs), same gates as human code.

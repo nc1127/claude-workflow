@@ -19,7 +19,7 @@ Convert intent into **behaviour specs** that become the source of truth for agen
 2. List primary actor(s) and permissions assumptions
 3. Write happy-path scenarios
 4. Write failure/edge scenarios (403, validation, not found, idempotency if relevant)
-5. List open questions for TTL/PO
+5. List open questions for tech lead/PO
 
 ## Output template
 

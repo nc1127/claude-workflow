@@ -25,7 +25,7 @@ Produce a **locked API contract** aligned to BDD scenarios.
 
 ```markdown
 ## Contract status
-draft | ready-for-TTL-lock
+draft | ready-for-lock
 
 ## Endpoints
 ### METHOD /path

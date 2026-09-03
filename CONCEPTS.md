@@ -1,6 +1,6 @@
-# Concepts — brief language map
+# Concepts — shared language map
 
-Use **ELMO / interview words** with stakeholders; use **Claude Code words** with engineers.
+Use **delivery words** with stakeholders; use **Claude Code words** with engineers.
 
 | Stakeholder term | Claude Code / kit term | What it is |
 |---|---|---|
@@ -21,7 +21,7 @@ Use **ELMO / interview words** with stakeholders; use **Claude Code words** with
 
 | Primitive | When loaded | Put here |
 |---|---|---|
-| `CLAUDE.md` | Always | Repo map, commands, norms (&lt; ~200 lines) |
+| `CLAUDE.md` | Always | Repo map, commands, norms (keep short) |
 | `rules/` | Always or path-scoped | Must / must-not constraints |
 | `skills/` | On invoke / match | Step-by-step procedures |
 | `agents/` | When delegated | Role, tools mindset, success criteria |

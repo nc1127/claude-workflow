@@ -3,7 +3,7 @@
 This is the **human-facing prompt library**.  
 In Claude Code, the executable versions live in `.claude/skills/*/SKILL.md`.
 
-**TTL ownership:** when review comments repeat twice, update the matching skill **and** this index note.
+**Tech lead ownership:** when review comments repeat twice, update the matching skill **and** this index note.
 
 ## Delivery skills
 

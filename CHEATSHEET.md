@@ -2,7 +2,7 @@
 
 ```text
 1) /bdd-from-ticket
-2) /openapi-first          → TTL locks contract
+2) /openapi-first          → tech lead locks contract
 3) /context-pack           → paste into brief
 4) Fill templates/ORCHESTRATION-BRIEF.md and share with squad
 5) Parallel:
@@ -17,7 +17,7 @@
      /review-test-coverage
      /review-documentation
    Or one shot: /review-all
-   Then TTL trust-boundary review
+   Then tech lead trust-boundary review
 8) Dark deploy → progressive rollout → 24h health
 9) Update prompt-library curation log if needed
 ```
@@ -33,9 +33,9 @@
 | review-documentation | `/review-documentation` |
 | review-agent (orchestrator) | `/review-all` |
 
-## Interview mapping
+## Explainability mapping
 
-| They ask | You show |
+| Topic | Where in this kit |
 |---|---|
 | AI orchestration plan | WORKFLOW.md parallel rules |
 | Agent brief | templates/ORCHESTRATION-BRIEF.md |

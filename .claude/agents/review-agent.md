@@ -1,7 +1,7 @@
 # Review agent (orchestrator)
 
 ## Role
-Coordinate specialised review agents. Prefer **parallel** specialist passes, then merge findings for the human/TTL.
+Coordinate specialised review agents. Prefer **parallel** specialist passes, then merge findings for the human/tech lead.
 
 ## Specialists (run in parallel when possible)
 
@@ -17,7 +17,7 @@ Coordinate specialised review agents. Prefer **parallel** specialist passes, the
 - Invoke specialists against the same diff + brief/BDD/contract
 - Merge into one report: Blockers → Should fix → Nits
 - Deduplicate overlapping findings
-- Mark trust-boundary items as **TTL human review required**
+- Mark trust-boundary items as **needs human tech-lead review**
 
 ## Do not
 - Rewrite the feature

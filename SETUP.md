@@ -18,7 +18,7 @@ Open `.claude/CLAUDE.md` and replace placeholders:
 - test / lint / typecheck commands
 - design-system package name
 - feature-flag helper path
-- domain name (e.g. Recruitment)
+- domain name (e.g. billing, projects, identity)
 
 ## 3. Enable Claude Code
 
@@ -41,13 +41,13 @@ Confirm skills appear (name/description only at session start):
 
 Add to team wiki / CONTRIBUTING:
 
-1. No feature work starts without an **orchestration brief** (or TTL waiver for tiny bugs).
+1. No feature work starts without an **orchestration brief** (or tech-lead waiver for tiny bugs).
 2. **Context pack** required before parallel FE/BE agents.
 3. BDD scenarios + contract are source of truth.
 4. AI-generated and human code use the **same** PR checklist and CI gates.
 5. Feature flags: new user-facing behaviour deploys **dark** by default.
 6. No prod/PII data in prompts or fixtures.
-7. Skills/prompts are versioned in git; TTL owns curation for the domain.
+7. Skills/prompts are versioned in git; the tech lead owns curation for the domain.
 
 ## 5. Optional: prompt-library mirror
 
@@ -55,7 +55,7 @@ If some engineers use Codex/Cursor instead of Claude Code:
 
 - Keep `prompt-library/*.md` as the **canonical text**
 - Claude Code `skills/*/SKILL.md` should stay in sync with those files
-- TTL reviews both in the same PR when changing a procedure
+- Review both in the same PR when changing a procedure
 
 ## 6. Smoke test
 

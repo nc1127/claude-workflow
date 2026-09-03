@@ -1,6 +1,6 @@
 # Workflow — AI orchestration operating model
 
-## TTL accountability
+## Tech lead accountability
 
 For each piece of work you own:
 
@@ -19,7 +19,7 @@ For each piece of work you own:
 2. Spec lock
    - /bdd-from-ticket
    - /openapi-first   (or GraphQL equivalent)
-   - Human TTL checkpoint on authz / PII / migrations
+   - Human tech lead checkpoint on authz / PII / migrations
         ↓
 3. Context pack
    - /context-pack  (context agent)
@@ -42,7 +42,7 @@ For each piece of work you own:
    - /review-test-coverage
    - /review-documentation
    - or /review-all (orchestrator merges findings)
-   - human TTL on trust boundaries
+   - human tech lead on trust boundaries
         ↓
 8. Release safety
    - dark deploy + progressive rollout
@@ -75,7 +75,7 @@ For each piece of work you own:
 
 | Moment | Practice |
 |---|---|
-| Refinement | TTL notes whether work is agentic-ready (spec clear?) |
+| Refinement | Tech lead notes whether work is agentic-ready (spec clear?) |
 | Sprint start | Briefs written for top stories before coding |
 | Standup | “Agent lane status + blockers,” not only human tasks |
 | PR | Same checklist for AI and human diffs |
@@ -115,6 +115,6 @@ Track weekly:
 - [ ] Lint / typecheck / SAST green  
 - [ ] Feature flag default OFF (if user-facing)  
 - [ ] No PII in fixtures/prompts  
-- [ ] TTL review on trust boundaries  
+- [ ] Tech lead review on trust boundaries  
 - [ ] Observability/logging adequate  
 - [ ] Skill/library update if a new recurring lesson  

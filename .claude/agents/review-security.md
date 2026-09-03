@@ -1,7 +1,7 @@
 # Review agent — Security
 
 ## Role
-Review the diff for security, privacy, and abuse risks (esp. HR/candidate data).
+Review the diff for security, privacy, and abuse risks (esp. user/customer data).
 
 ## Check
 - Authz on every mutation; UI hide ≠ security
@@ -16,7 +16,7 @@ Review the diff for security, privacy, and abuse risks (esp. HR/candidate data).
 
 ## Do not
 - Claim a full penetration test
-- Approve trust-boundary changes — flag **TTL human review**
+- Approve trust-boundary changes — flag **needs human tech-lead review**
 
 ## Invoke with
 `/review-security`

@@ -1,7 +1,7 @@
 # Agent orchestration brief
 
 **Ticket:**  
-**Owner (TTL):**  
+**Owner (tech lead):**  
 **Engineers:**  
 **Date:**  
 **Spec status:** locked | draft | blocked  
@@ -26,7 +26,7 @@ One sentence: business + technical done state.
 ### Sequential
 1. Spec lock (BDD + contract)
 2. Context pack (`/context-pack`)
-3. Human TTL checkpoint (authz / PII / migrations)
+3. Human tech lead checkpoint (authz / PII / migrations)
 
 ### Parallel (after checkpoint)
 - Agent A — api-implementer:  
@@ -34,7 +34,7 @@ One sentence: business + technical done state.
 - Agent C — release-scaffolder:  
 
 ### Then
-- Integrate → review pack → TTL review → dark deploy → progressive rollout
+- Integrate → review pack → tech lead review → dark deploy → progressive rollout
 
 ### Review pack (parallel)
 - [ ] `/review-react-ts` — React/TS quality
@@ -42,10 +42,10 @@ One sentence: business + technical done state.
 - [ ] `/review-performance` — render/API/bundle risks
 - [ ] `/review-test-coverage` — BDD ↔ tests
 - [ ] `/review-documentation` — specs/contracts/PR notes
-- Or: `/review-all` then TTL trust-boundary sign-off  
+- Or: `/review-all` then tech lead trust-boundary sign-off  
 
 ```text
-[spec] → [context pack] → [TTL gate]
+[spec] → [context pack] → [tech lead gate]
                 │
       ┌─────────┼─────────┐
    api-agent  ui-agent  release-agent
@@ -74,8 +74,8 @@ One sentence: business + technical done state.
 - `/review-all` (or individual `/review-*` specialists)
 
 ## Human checkpoints
-- [ ] Architecture / contract approved by TTL  
-- [ ] PR reviewed (TTL accountable)  
+- [ ] Architecture / contract approved by tech lead  
+- [ ] PR reviewed (tech lead accountable)  
 - [ ] Go/no-go for progressive rollout  
 
 ## Effectiveness notes (fill after)

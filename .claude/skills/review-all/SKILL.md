@@ -24,7 +24,7 @@ Orchestrate parallel specialist reviews and produce one merged report.
 ```markdown
 ## Review pack (merged)
 overall risk: low | medium | high
-TTL human review required: yes/no
+Human tech-lead review required: yes/no
 
 ### Blockers
 - [security|react-ts|performance|tests|docs] …

@@ -31,7 +31,7 @@ risk: low | medium | high
 ### Nits
 -
 
-### TTL human review required?
+### Human tech-lead review required?
 - authz/PII/migration: yes/no
 
 ### Residual risks
