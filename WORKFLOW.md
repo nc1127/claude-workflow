@@ -35,8 +35,14 @@ For each piece of work you own:
 6. Agent loops
    - implement → run tests → fix → until green or blocker
         ↓
-7. Review
-   - /pr-review-security (+ human TTL on trust boundaries)
+7. Review (parallel specialists)
+   - /review-react-ts
+   - /review-security
+   - /review-performance
+   - /review-test-coverage
+   - /review-documentation
+   - or /review-all (orchestrator merges findings)
+   - human TTL on trust boundaries
         ↓
 8. Release safety
    - dark deploy + progressive rollout

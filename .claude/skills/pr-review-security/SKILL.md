@@ -1,43 +1,12 @@
 ---
 name: pr-review-security
-description: Review a diff for authz, PII, validation, flags, tests, DS misuse, and scope creep. Use before merge on AI or human PRs.
+description: Alias for security review. Prefer /review-security or /review-all for full pack.
 ---
 
-# PR review (security & quality)
+# PR review security (alias)
 
-## Goal
-Findings-first review against spec + Context pack + rules.
+This skill is kept for backward compatibility.
 
-## Rules
-- Prefer actionable findings over rewrites
-- Separate **Blockers** vs **Nits**
-- Trust-boundary issues → “needs TTL human review”
-- Do not approve missing authz/tests on mutations
+Run the full checklist from `/review-security`.
 
-## Process
-1. Read PR diff + brief/BDD/contract if provided
-2. Check authz, validation, PII fixtures, flag default, tests, DS, scope
-3. Output report template
-
-## Output template
-
-```markdown
-## Summary
-risk: low | medium | high
-
-## Blockers
--
-
-## Should fix
--
-
-## Nits
--
-
-## Spec coverage
-- BDD covered: yes/no/partial
-- Contract covered: yes/no/partial
-
-## TTL human review required?
-- authz/PII/migration: yes/no
-```
+For feature PRs, prefer `/review-all` so React/TS quality, performance, tests, and docs are included too.

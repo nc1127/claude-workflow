@@ -10,10 +10,28 @@
      - ui agent   + /react-form
      - release    + /feature-flag-rollout
 6) Each agent: implement → test → fix loop
-7) /pr-review-security + TTL trust-boundary review
+7) Review pack (parallel specialists):
+     /review-react-ts
+     /review-security
+     /review-performance
+     /review-test-coverage
+     /review-documentation
+   Or one shot: /review-all
+   Then TTL trust-boundary review
 8) Dark deploy → progressive rollout → 24h health
 9) Update prompt-library curation log if needed
 ```
+
+## Review agents (5 specialists + 1 orchestrator)
+
+| Agent | Skill |
+|---|---|
+| review-react-ts-quality | `/review-react-ts` |
+| review-security | `/review-security` |
+| review-performance | `/review-performance` |
+| review-test-coverage | `/review-test-coverage` |
+| review-documentation | `/review-documentation` |
+| review-agent (orchestrator) | `/review-all` |
 
 ## Interview mapping
 
@@ -24,5 +42,6 @@
 | Context agents need | `/context-pack` + agents/context-agent.md |
 | Guardrails | `.claude/rules/*` |
 | Prompt library | prompt-library/README.md + skills |
+| Specialised review agents | `.claude/agents/review-*.md` |
 | Agentic / multi-file / loops | api-endpoint & react-form skills (test loops) |
 | Spec-driven + BDD | bdd-from-ticket + openapi-first |

@@ -5,6 +5,8 @@ In Claude Code, the executable versions live in `.claude/skills/*/SKILL.md`.
 
 **TTL ownership:** when review comments repeat twice, update the matching skill **and** this index note.
 
+## Delivery skills
+
 | ID | Name | When to use | Claude skill |
 |---|---|---|---|
 | PL-01 | BDD from ticket | Start of story | `/bdd-from-ticket` |
@@ -13,13 +15,25 @@ In Claude Code, the executable versions live in `.claude/skills/*/SKILL.md`.
 | PL-04 | API endpoint | Backend implementer loop | `/api-endpoint` |
 | PL-05 | React form / UI | Frontend implementer loop | `/react-form` |
 | PL-06 | Feature flag rollout | Dark deploy scaffolding | `/feature-flag-rollout` |
-| PL-07 | PR review security | Pre-merge review agent | `/pr-review-security` |
+
+## Review skills (specialists)
+
+| ID | Name | When to use | Claude skill |
+|---|---|---|---|
+| PL-07 | Review — React/TS quality | Frontend / shared TS diffs | `/review-react-ts` |
+| PL-08 | Review — Security | Authz, PII, secrets, abuse | `/review-security` |
+| PL-09 | Review — Performance | Render, bundle, API cost | `/review-performance` |
+| PL-10 | Review — Test coverage | BDD ↔ tests gaps | `/review-test-coverage` |
+| PL-11 | Review — Documentation | Specs, contracts, PR notes | `/review-documentation` |
+| PL-12 | Review — All (orchestrator) | Feature PRs before merge | `/review-all` |
+| PL-13 | PR review security (alias) | Back-compat → security | `/pr-review-security` |
 
 ## Curation log
 
 | Date | Change | Why |
 |---|---|---|
-| YYYY-MM-DD | e.g. API skill must require audit event | Missed twice on reject/withdraw |
+| 2026-09-03 | Split review into 5 specialists + `/review-all` | Need quality, security, perf, tests, docs coverage |
+| YYYY-MM-DD | | |
 
 ## Tooling note
 

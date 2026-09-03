@@ -34,7 +34,15 @@ One sentence: business + technical done state.
 - Agent C — release-scaffolder:  
 
 ### Then
-- Integrate → `/pr-review-security` → TTL review → dark deploy → progressive rollout  
+- Integrate → review pack → TTL review → dark deploy → progressive rollout
+
+### Review pack (parallel)
+- [ ] `/review-react-ts` — React/TS quality
+- [ ] `/review-security` — authz, PII, secrets
+- [ ] `/review-performance` — render/API/bundle risks
+- [ ] `/review-test-coverage` — BDD ↔ tests
+- [ ] `/review-documentation` — specs/contracts/PR notes
+- Or: `/review-all` then TTL trust-boundary sign-off  
 
 ```text
 [spec] → [context pack] → [TTL gate]
@@ -63,7 +71,7 @@ One sentence: business + technical done state.
 - `/context-pack`
 - `/api-endpoint` and/or `/react-form`
 - `/feature-flag-rollout`
-- `/pr-review-security`
+- `/review-all` (or individual `/review-*` specialists)
 
 ## Human checkpoints
 - [ ] Architecture / contract approved by TTL  

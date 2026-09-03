@@ -45,7 +45,7 @@ Authorised hiring managers can reject a candidate with a reason; audit is writte
 - Same CI gates  
 
 ## Skills
-`/context-pack` → `/api-endpoint` + `/react-form` + `/feature-flag-rollout` → `/pr-review-security`
+`/context-pack` → `/api-endpoint` + `/react-form` + `/feature-flag-rollout` → `/review-all` (react-ts, security, performance, test-coverage, documentation)
 
 ## Effectiveness notes (after)
 - Miss: audit field omitted once → updated `/api-endpoint` done checklist to require audit when sensitive action

@@ -57,6 +57,18 @@ elmo-ai-orchestration-kit/
 
 ---
 
+## Agents at a glance
+
+**Build:** context · api-implementer · ui-implementer · release-scaffolder  
+
+**Review (5 specialists + orchestrator):**
+- React/TypeScript quality
+- Security
+- Performance
+- Test coverage
+- Documentation
+- `review-agent` + `/review-all` merges them
+
 ## Suggested interview one-liner
 
-> I run a Claude Code harness: short CLAUDE.md, path-scoped rules, a curated skill/prompt library, and specialised agents. Each ticket gets an orchestration brief—context pack first, then parallel implementers against locked BDD/OpenAPI, same quality gates as human code.
+> I run a Claude Code harness: short CLAUDE.md, path-scoped rules, a curated skill/prompt library, and specialised agents. Each ticket gets an orchestration brief—context pack first, then parallel implementers against locked BDD/OpenAPI, then a parallel review pack (quality, security, perf, tests, docs), same gates as human code.
