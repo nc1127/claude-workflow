@@ -29,25 +29,24 @@ claude
 
 Confirm skills appear (name/description only at session start):
 
-- `context-pack`
-- `bdd-from-ticket`
-- `openapi-first`
-- `api-endpoint`
-- `react-form`
-- `feature-flag-rollout`
-- `pr-review-security`
+- `context-pack`, `bdd-from-ticket`, `openapi-first`
+- `api-endpoint`, `react-form`, `feature-flag-rollout`
+- `review-all` (+ specialist `review-*` skills)
+
+Optional: install [GitHub Spec Kit](https://github.com/github/spec-kit) and run `specify init` so `/speckit.*` commands generate the same artefact shapes.
 
 ## 4. Team agreement (Definition of Done for AI work)
 
 Add to team wiki / CONTRIBUTING:
 
-1. No feature work starts without an **orchestration brief** (or tech-lead waiver for tiny bugs).
+1. No feature work starts without locked **spec.md + plan.md** (or tech-lead waiver for tiny bugs).
 2. **Context pack** required before parallel FE/BE agents.
-3. BDD scenarios + contract are source of truth.
+3. BDD scenarios + contract are source of truth (`spec.md` + `contracts/`).
 4. AI-generated and human code use the **same** PR checklist and CI gates.
 5. Feature flags: new user-facing behaviour deploys **dark** by default.
 6. No prod/PII data in prompts or fixtures.
 7. Skills/prompts are versioned in git; the tech lead owns curation for the domain.
+8. Prefer Spec Kit artefact shapes; optional `specify` CLI for `/speckit.*` commands.
 
 ## 5. Optional: prompt-library mirror
 

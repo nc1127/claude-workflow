@@ -1,6 +1,6 @@
 ---
 name: context-pack
-description: Research the codebase and produce a tight Context pack for implementer agents. Use before parallel FE/BE work or when an orchestration brief needs mirrors, paths, contracts, and constraints.
+description: Research the codebase and produce a tight Context pack for implementer agents. Use before parallel FE/BE work or when plan.md Agent Orchestration needs mirrors, paths, contracts, and constraints.
 ---
 
 # Context pack

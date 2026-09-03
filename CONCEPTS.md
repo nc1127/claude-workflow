@@ -4,16 +4,18 @@ Use **delivery words** with stakeholders; use **Claude Code words** with enginee
 
 | Stakeholder term | Claude Code / kit term | What it is |
 |---|---|---|
+| Spec / BDD | `spec.md` | What to build; acceptance scenarios |
+| Implementation plan | `plan.md` | How; includes Agent Orchestration |
+| Task list | `tasks.md` | Ordered work with `[P]` + agent tags |
 | Prompt library | `.claude/skills/` (+ `prompt-library/`) | Curated reusable procedures |
 | Skill | `SKILL.md` | One library entry, loaded on demand |
-| Agent orchestration brief | `ORCHESTRATION-BRIEF.md` | Per-ticket playbook engineers execute |
-| Context agents need | Context pack | Paths, mirrors, contracts, constraints |
+| Agent orchestration brief | `plan.md` Agent Orchestration + `tasks.md` | What engineers/agents execute against |
+| Context agents need | `context-pack.md` | Paths, mirrors, contracts, constraints |
 | Context agent | `agents/context-agent.md` + `/context-pack` | Research-only pack builder |
-| Guardrails | `.claude/rules/` + hooks + brief rules | Hard constraints |
-| Spec-driven / BDD | scenarios + OpenAPI first | Behaviour + contract as source of truth |
+| Guardrails | constitution + rules + plan | Hard constraints |
+| Spec-driven / BDD | Spec Kit spine + scenarios | Behaviour + contract as source of truth |
 | Agentic development | specialised agents + loops | Named workflows, not freestyle chat |
-| Autonomous agent loop | edit → test → fix → repeat | Self-correct until green or blocked |
-| Feature scaffolding | stub files from spec | Vertical slice skeleton before fill |
+| Feature scaffolding | stub from contract/tasks | Vertical slice before fill |
 
 ---
 

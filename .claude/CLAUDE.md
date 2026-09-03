@@ -29,7 +29,8 @@ Keep this file short. Procedures belong in skills. Constraints belong in rules.
 - No drive-by refactors outside the ticket
 
 ## Orchestration
-- Start features with an orchestration brief
+- Start features with Spec Kit artefacts (`spec` → `plan` → `tasks`)
+- Put agent lanes, guardrails, and skills in `plan.md` Agent Orchestration
 - Run `/context-pack` before parallel FE/BE agents
 - Trust-boundary changes (authz, PII, migrations) need human tech-lead review
 
@@ -37,4 +38,5 @@ Keep this file short. Procedures belong in skills. Constraints belong in rules.
 - Skills: `.claude/skills/`
 - Rules: `.claude/rules/`
 - Agent roles: `.claude/agents/`
-- Brief template: `docs/ai-orchestration/templates/ORCHESTRATION-BRIEF.md` (if copied)
+- Brief template: use Spec Kit `spec.md` / `plan.md` / `tasks.md` under `specs/[###-feature]/`
+- Agent orchestration lives in `plan.md` (Agent Orchestration section)

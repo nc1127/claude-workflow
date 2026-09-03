@@ -1,28 +1,30 @@
-# Cheat sheet — run a story with this kit
+# Cheat sheet — Spec Kit + agent orchestration
 
 ```text
-1) /bdd-from-ticket
-2) /openapi-first          → tech lead locks contract
-3) /context-pack           → paste into brief
-4) Fill templates/ORCHESTRATION-BRIEF.md and share with squad
-5) Parallel:
-     - api agent  + /api-endpoint
-     - ui agent   + /react-form
-     - release    + /feature-flag-rollout
-6) Each agent: implement → test → fix loop
-7) Review pack (parallel specialists):
-     /review-react-ts
-     /review-security
-     /review-performance
-     /review-test-coverage
-     /review-documentation
-   Or one shot: /review-all
-   Then tech lead trust-boundary review
-8) Dark deploy → progressive rollout → 24h health
-9) Update prompt-library curation log if needed
+0) constitution (once per repo)     → templates/constitution.md
+1) spec.md                          → BDD / requirements (Status: Locked)
+2) plan.md                          → tech plan + Agent Orchestration section
+3) /context-pack                    → context-pack.md
+4) tasks.md                         → [P] parallel + [api]/[ui]/[release]/[review]
+5) Implement lanes with skills:
+     /api-endpoint  /react-form  /feature-flag-rollout
+6) Review: /review-all (or specialists)
+7) Dark deploy → progressive rollout
+8) Effectiveness notes → curate skills
 ```
 
-## Review agents (5 specialists + 1 orchestrator)
+## Per-feature folder
+
+```text
+specs/[###-feature]/
+├── spec.md
+├── plan.md          ← includes Agent Orchestration
+├── context-pack.md
+├── tasks.md
+└── contracts/
+```
+
+## Review agents
 
 | Agent | Skill |
 |---|---|
@@ -35,13 +37,10 @@
 
 ## Explainability mapping
 
-| Topic | Where in this kit |
+| Topic | Where |
 |---|---|
-| AI orchestration plan | WORKFLOW.md parallel rules |
-| Agent brief | templates/ORCHESTRATION-BRIEF.md |
-| Context agents need | `/context-pack` + agents/context-agent.md |
-| Guardrails | `.claude/rules/*` |
-| Prompt library | prompt-library/README.md + skills |
-| Specialised review agents | `.claude/agents/review-*.md` |
-| Agentic / multi-file / loops | api-endpoint & react-form skills (test loops) |
-| Spec-driven + BDD | bdd-from-ticket + openapi-first |
+| Spec-driven spine | `templates/spec.md` `plan.md` `tasks.md` |
+| Agent orchestration | `plan.md` → Agent Orchestration |
+| Context agents need | `context-pack.md` + `/context-pack` |
+| Prompt library | `prompt-library/` + `.claude/skills/` |
+| Review pack | `.claude/agents/review-*.md` |

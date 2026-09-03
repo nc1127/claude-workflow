@@ -1,13 +1,11 @@
-# Workflow — AI orchestration operating model
+# Workflow — Spec Kit + AI orchestration
 
 ## Tech lead accountability
 
-For each piece of work you own:
-
-1. **Orchestration plan** — parallel vs sequential, context, guardrails  
-2. **Brief** — engineers execute against it  
-3. **Effectiveness** — quality/speed metrics; fix skills if weak  
-4. **Prompt library curation** — update skills when patterns change  
+1. **Spec spine** — constitution, spec, plan, tasks (Spec Kit shapes)  
+2. **Agent orchestration** — context, lanes, guardrails, skills (in `plan.md`)  
+3. **Effectiveness** — quality/speed; curate skills when weak  
+4. **Prompt library curation** — update `.claude/skills/` when patterns change  
 
 ---
 
@@ -16,40 +14,26 @@ For each piece of work you own:
 ```text
 1. Ticket / PO intent
         ↓
-2. Spec lock
-   - /bdd-from-ticket
-   - /openapi-first   (or GraphQL equivalent)
-   - Human tech lead checkpoint on authz / PII / migrations
+2. spec.md  (BDD + requirements) → Status: Locked
         ↓
-3. Context pack
-   - /context-pack  (context agent)
+3. plan.md  (tech context + Agent Orchestration section)
+   - constitution check
+   - contracts & flag
         ↓
-4. Publish orchestration brief
-   - templates/ORCHESTRATION-BRIEF.md
+4. context-pack.md  (/context-pack)
+   - human tech-lead checkpoint (authz / PII / migrations)
         ↓
-5. Fan-out (parallel where safe)
-   - api-implementer
-   - ui-implementer
-   - release-scaffolder (flag, metrics)
+5. tasks.md  ([P] parallel + agent tags)
         ↓
-6. Agent loops
-   - implement → run tests → fix → until green or blocker
+6. Fan-out implementers
+   - api / ui / release skills + test loops
         ↓
-7. Review (parallel specialists)
-   - /review-react-ts
-   - /review-security
-   - /review-performance
-   - /review-test-coverage
-   - /review-documentation
-   - or /review-all (orchestrator merges findings)
-   - human tech lead on trust boundaries
+7. Review pack (/review-all or specialists)
+   - human trust-boundary sign-off
         ↓
-8. Release safety
-   - dark deploy + progressive rollout
-   - 24h health check
+8. Dark deploy + progressive rollout
         ↓
-9. Retrospective on AI effectiveness
-   - update skill/prompt library if repeated misses
+9. Effectiveness notes → skill curation
 ```
 
 ---
@@ -61,6 +45,7 @@ For each piece of work you own:
 - API + unit tests  
 - UI + RTL  
 - Flag / telemetry scaffolding  
+- Review specialists  
 
 **Keep sequential:**
 
@@ -75,46 +60,41 @@ For each piece of work you own:
 
 | Moment | Practice |
 |---|---|
-| Refinement | Tech lead notes whether work is agentic-ready (spec clear?) |
-| Sprint start | Briefs written for top stories before coding |
-| Standup | “Agent lane status + blockers,” not only human tasks |
+| Refinement | Is `spec.md` clear enough to lock? |
+| Sprint start | `plan.md` + `tasks.md` ready for top stories |
+| Standup | Task/agent lane status + blockers |
 | PR | Same checklist for AI and human diffs |
-| End of week | Skill curation: merge repeated review comments into skills |
+| End of week | Skill curation from repeated review misses |
 
 ---
 
 ## Bug vs feature
 
-| Type | Orchestration |
+| Type | Artefacts |
 |---|---|
-| Tiny bug | Often **no** parallel agents; one session + test loop |
-| Feature | Full brief + context pack + parallel lanes |
-| Risky (PII/export/auth) | Extra sequential privacy/security gate before fan-out |
+| Tiny bug | Short tasks or waiver; full Spec Kit optional |
+| Feature | Full `spec` → `plan` → `context-pack` → `tasks` |
+| Risky (PII/export/auth) | Extra sequential security gate before fan-out |
 
 ---
 
-## Effectiveness metrics (report to EM)
+## Effectiveness metrics
 
-Track weekly:
-
-- % stories with a written brief  
+- % features with locked spec + plan before coding  
 - First-pass CI green rate on AI-assisted PRs  
-- Rework rounds (authz / tests / flag / DS misses)  
-- Defect escapes / security vulns from team code  
-- Cycle time trend (should not rise escapes)  
-
-**Interpretation:** speed up + quality down ⇒ orchestration failed → fix briefs, skills, or gates.
+- Rework rounds (authz / tests / flag / DS)  
+- Escapes / vulns from team code  
+- Cycle time vs quality  
 
 ---
 
-## Definition of Done (AI-assisted story)
+## Definition of Done
 
-- [ ] BDD scenarios covered  
+- [ ] `spec.md` locked; scenarios covered  
 - [ ] Contract implemented  
-- [ ] Tests green (unit + relevant e2e)  
-- [ ] Lint / typecheck / SAST green  
+- [ ] `tasks.md` complete for the slice  
+- [ ] Tests green; lint/typecheck/SAST green  
 - [ ] Feature flag default OFF (if user-facing)  
+- [ ] Review pack done; tech-lead trust-boundary OK  
 - [ ] No PII in fixtures/prompts  
-- [ ] Tech lead review on trust boundaries  
-- [ ] Observability/logging adequate  
-- [ ] Skill/library update if a new recurring lesson  
+- [ ] Effectiveness / skill update if needed  

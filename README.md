@@ -1,12 +1,14 @@
-# AI Orchestration Kit (Claude Code)
+# AI Orchestration Kit (Claude Code + Spec Kit)
 
-Paste-ready setup for a technical lead running **spec-driven + agentic** delivery.
+Paste-ready setup for a technical lead running **Spec-Driven Development** with **agentic** delivery.
 
 Use this to:
-- Own the **AI orchestration plan** per piece of work
-- Produce an **agent orchestration brief** engineers execute against
-- Curate a **prompt library / skills** for your domain
-- Prove **effectiveness** of AI-directed delivery
+- Follow **GitHub Spec Kit** shapes: constitution → spec → plan → tasks  
+- Own **agent orchestration** inside `plan.md` (context, lanes, guardrails, skills)  
+- Curate a **prompt library / skills** for your domain  
+- Prove **effectiveness** of AI-directed delivery  
+
+Official Spec Kit: https://github.com/github/spec-kit (MIT)
 
 ---
 
@@ -14,46 +16,49 @@ Use this to:
 
 ```text
 claude-workflow/
-├── README.md                          ← you are here
-├── SETUP.md                           ← install into a repo
-├── WORKFLOW.md                        ← daily / sprint operating model
-├── CONCEPTS.md                        ← prompt library vs skill vs agent vs brief
+├── README.md
+├── SETUP.md
+├── WORKFLOW.md
+├── CONCEPTS.md
+├── CHEATSHEET.md
 ├── templates/
-│   ├── ORCHESTRATION-BRIEF.md
-│   └── CONTEXT-PACK.md
+│   ├── README.md                 ← Spec Kit alignment
+│   ├── constitution.md
+│   ├── spec.md
+│   ├── plan.md                   ← includes Agent Orchestration
+│   ├── tasks.md
+│   ├── CONTEXT-PACK.md
+│   └── ORCHESTRATION-BRIEF.md    ← migration pointer (legacy)
 ├── examples/
-│   └── FEAT-128-archive-project.md
+│   └── 128-archive-project/      ← full Spec Kit example
 ├── prompt-library/
-│   └── README.md                      ← human-readable library index
-└── .claude/
-    ├── CLAUDE.md                      ← always-on project facts (keep short)
-    ├── rules/                         ← hard constraints
-    ├── skills/                        ← on-demand procedures (prompt library)
-    └── agents/                        ← specialised agent role defs
+└── .claude/                      ← Claude Code harness
 ```
 
 ---
 
-## Quick start (5 minutes)
+## Quick start
 
-1. Copy `.claude/` into your repo root.
-2. Edit `.claude/CLAUDE.md` paths/commands for your monorepo.
-3. Read `WORKFLOW.md`.
-4. For the next ticket: run skill `/context-pack` → fill `templates/ORCHESTRATION-BRIEF.md` → fan out agents.
-5. After the PR: update skills if the same review comment appeared twice (curation).
+1. Copy `.claude/` into your repo; edit `CLAUDE.md`.  
+2. Copy `templates/constitution.md` → `.specify/memory/constitution.md` or `docs/constitution.md`.  
+3. Per feature: copy `spec.md` `plan.md` `tasks.md` into `specs/[###-feature]/`.  
+4. Run `/context-pack` → `context-pack.md`, lock plan, execute tasks.  
+5. `/review-all` → flag/rollout → curate skills.  
+
+Optional: install Spec Kit (`specify init`) and use `/speckit.*` commands with the same artefact shapes.
 
 ---
 
 ## Ownership (tech lead)
 
-| Responsibility | Artefact in this kit |
+| Responsibility | Artefact |
 |---|---|
-| AI orchestration plan | `WORKFLOW.md` + brief parallel graph |
-| Agent orchestration brief | `templates/ORCHESTRATION-BRIEF.md` |
-| Context agents need | `/context-pack` skill + context agent |
-| Guardrails | `.claude/rules/` + brief Guardrails section |
+| Spec-driven spine | `spec.md` / `plan.md` / `tasks.md` |
+| Agent orchestration | `plan.md` → Agent Orchestration |
+| Context agents need | `context-pack.md` + `/context-pack` |
+| Guardrails | constitution + plan guardrails + `.claude/rules/` |
 | Prompt library curation | `.claude/skills/` + `prompt-library/README.md` |
-| Effectiveness | metrics section in `WORKFLOW.md` |
+| Effectiveness | plan notes + WORKFLOW metrics |
 
 ---
 
@@ -61,14 +66,8 @@ claude-workflow/
 
 **Build:** context · api-implementer · ui-implementer · release-scaffolder  
 
-**Review (5 specialists + orchestrator):**
-- React/TypeScript quality
-- Security
-- Performance
-- Test coverage
-- Documentation
-- `review-agent` + `/review-all` merges them
+**Review:** React/TS · security · performance · test coverage · documentation · `/review-all`
 
-## One-liner summary
+## One-liner
 
-> Run a Claude Code harness: short CLAUDE.md, path-scoped rules, a curated skill/prompt library, and specialised agents. Each ticket gets an orchestration brief—context pack first, then parallel implementers against locked BDD/OpenAPI, then a parallel review pack (quality, security, perf, tests, docs), same gates as human code.
+> We use Spec Kit artefacts for spec → plan → tasks, and embed agent orchestration in the plan—context packs, parallel lanes, guardrails, specialised reviews, and flagged rollouts—so AI delivery stays accountable.

@@ -1,83 +1,23 @@
-# Agent orchestration brief
+# Migration: orchestration brief → Spec Kit
 
-**Ticket:**  
-**Owner (tech lead):**  
-**Engineers:**  
-**Date:**  
-**Spec status:** locked | draft | blocked  
+The purpose-built single brief was replaced with Spec Kit artefacts.
 
----
+## Old → new
 
-## Outcome
-One sentence: business + technical done state.
+| Old brief section | Spec Kit location |
+|---|---|
+| Outcome / Acceptance (BDD) | `spec.md` User Stories + Acceptance Scenarios |
+| Contracts / flag | `plan.md` Contracts & Flags (+ `contracts/`) |
+| Work graph / parallel agents | `plan.md` → **Agent Orchestration** |
+| Context pack | `context-pack.md` (linked from plan) |
+| Guardrails / skills / review | `plan.md` Agent Orchestration |
+| Human checkpoints | `plan.md` + `tasks.md` Phase Review & Release |
+| Effectiveness notes | `plan.md` Effectiveness notes |
+| Task breakdown | `tasks.md` with `[P]` and `[api]/[ui]/…` |
 
-## Acceptance (BDD)
-- Given … When … Then …
-- Given … When … Then …
-- Given … When … Then …
+## Engineer execute path
 
-## Contracts
-- OpenAPI / GraphQL:  
-- Types / events:  
-- Feature flag (default OFF):  
-
-## Work graph
-
-### Sequential
-1. Spec lock (BDD + contract)
-2. Context pack (`/context-pack`)
-3. Human tech lead checkpoint (authz / PII / migrations)
-
-### Parallel (after checkpoint)
-- Agent A — api-implementer:  
-- Agent B — ui-implementer:  
-- Agent C — release-scaffolder:  
-
-### Then
-- Integrate → review pack → tech lead review → dark deploy → progressive rollout
-
-### Review pack (parallel)
-- [ ] `/review-react-ts` — React/TS quality
-- [ ] `/review-security` — authz, PII, secrets
-- [ ] `/review-performance` — render/API/bundle risks
-- [ ] `/review-test-coverage` — BDD ↔ tests
-- [ ] `/review-documentation` — specs/contracts/PR notes
-- Or: `/review-all` then tech lead trust-boundary sign-off  
-
-```text
-[spec] → [context pack] → [tech lead gate]
-                │
-      ┌─────────┼─────────┐
-   api-agent  ui-agent  release-agent
-      └─────────┼─────────┘
-            [review] → [flag OFF deploy] → [rollout]
-```
-
----
-
-## Context pack
-> Paste output of `/context-pack` here (or attach link).
-
-## Guardrails (hard)
-- [ ] No secrets / prod data / real PII in prompts or fixtures  
-- [ ] No new dependencies without approval  
-- [ ] Authz + validation required on mutations  
-- [ ] Tests required for changed behaviour  
-- [ ] Lint / unit / SAST must pass  
-- [ ] Feature flag required for user-facing behaviour  
-- [ ] Do not change: _______________________________  
-
-## Skills to use
-- `/context-pack`
-- `/api-endpoint` and/or `/react-form`
-- `/feature-flag-rollout`
-- `/review-all` (or individual `/review-*` specialists)
-
-## Human checkpoints
-- [ ] Architecture / contract approved by tech lead  
-- [ ] PR reviewed (tech lead accountable)  
-- [ ] Go/no-go for progressive rollout  
-
-## Effectiveness notes (fill after)
-- What AI got wrong:  
-- Skill/library update needed:  
+1. Read locked `spec.md`  
+2. Read `plan.md` Agent Orchestration  
+3. Execute assigned tasks in `tasks.md` with listed skills  
+4. Attach `/review-all` before rollout tasks  
